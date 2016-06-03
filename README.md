@@ -69,7 +69,7 @@ clearLoadingTimeout() - clear loading timeout
 
 ```
 git clone https://github.com/wenxucheng/react-native-loading-w.git
-cd Example && npm install
+cd Example && npm install && npm install react-native-loading-w
 react-native run-ios
 react-native run-android
 

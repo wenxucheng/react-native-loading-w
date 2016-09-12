@@ -6,8 +6,7 @@ import {
     StyleSheet,
     View,
     Platform,
-    ActivityIndicatorIOS,
-    ProgressBarAndroid
+    ActivityIndicator,
 } from 'react-native';
 
 class CircleProgress extends React.Component {
@@ -16,22 +15,15 @@ class CircleProgress extends React.Component {
     }
 
     render() {
-        if (Platform.OS === 'ios') {
-            return (
-                <ActivityIndicatorIOS
-                    animating={true}
-                    color='white'
-                    style={styles.centering}
-                    size='small'
-                />
-            );
-        } else {
-            return (
-                <ProgressBarAndroid styleAttr="Inverse" color='white' />
-            );
+        return(
+            <ActivityIndicator
+                animating={true}
+                color='white'
+                style={styles.centering}
+                size='small'
+            />
+          );  
         }
-    }
-
 }
 
 const styles = StyleSheet.create({
